@@ -5,14 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>KlinUtils</PackageId>
-    <Version>0.0.1-preview</Version>
+    <Version>0.0.2-preview</Version>
     <Authors>Aweklin</Authors>
     <Product>KlinUtils</Product>
-    <Description>Contains set of utilities to perform common tasks in various project, such as Networking, Result pattern, etc...</Description>
+    <Description>Contains set of utilities to perform common tasks in various project, such as Networking, Result pattern, Exception, etc...</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/aweklin/KlinUtils</PackageProjectUrl>
     <PackageTags>Utilities;Networking;Result;Result Pattern;Aweklin;Klin</PackageTags>
-    <ProjectReadmeFile>README.md</ProjectReadmeFile>
+    <ProjectReadmeFile>../../README.md</ProjectReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>

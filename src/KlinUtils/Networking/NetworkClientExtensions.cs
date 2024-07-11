@@ -37,11 +37,4 @@ internal static class NetworkClientExtensions
             RequestType.Delete => nameof(RequestType.Delete),
             _ => throw new ArgumentOutOfRangeException(nameof(requestType)),
         };
-
-    public static IServiceCollection AddNetworkClient(this IServiceCollection services)
-    {
-        services.AddSingleton<INetworkClient, NetworkClient>();
-
-        return services;
-    }
 }
