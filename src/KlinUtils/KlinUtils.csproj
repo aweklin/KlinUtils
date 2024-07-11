@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>KlinUtils</PackageId>
+    <Version>0.0.1-preview</Version>
+    <Authors>Aweklin</Authors>
+    <Product>KlinUtils</Product>
+    <Description>Contains set of utilities to perform common tasks in various project, such as Networking, Result pattern, etc...</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/aweklin/KlinUtils</PackageProjectUrl>
+    <PackageTags>Utilities;Networking;Result;Result Pattern;Aweklin;Klin</PackageTags>
+    <ProjectReadmeFile>README.md</ProjectReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+        <_Parameter1>KlinUtils.UnitTests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>
