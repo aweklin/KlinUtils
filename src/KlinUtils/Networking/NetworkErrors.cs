@@ -2,6 +2,9 @@
 
 namespace KlinUtils.Networking;
 
+/// <summary>
+/// Contains series of possible network errors.
+/// </summary>
 public readonly ref struct NetworkErrors
 {
     public static Error UrlRequired => new("UrlRequired", "Url is required");

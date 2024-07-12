@@ -6,6 +6,7 @@ using KlinUtils.DiscriminatedUnion;
 
 namespace KlinUtils.Networking;
 
+/// <inheritdoc/>
 internal sealed class NetworkClient : INetworkClient
 {
     private readonly IHttpClientFactory _httpClientFactory;
@@ -14,8 +15,13 @@ internal sealed class NetworkClient : INetworkClient
     private static readonly MediaTypeWithQualityHeaderValue _applicationJson = new("application/json");
     private static readonly MediaTypeHeaderValue _applicationJsonHeader = new("application/json");
 
+    /// <inheritdoc/>
     public HttpStatusCode StatusCode { get; private set; }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="NetworkClient"/> class.
+    /// </summary>
+    /// <param name="httpClientFactory">Specifies an http client being used for the request.</param>
     public NetworkClient(IHttpClientFactory httpClientFactory)
     {
         _httpClientFactory = httpClientFactory;
@@ -25,6 +31,7 @@ internal sealed class NetworkClient : INetworkClient
         };
     }
 
+    /// <inheritdoc/>
     public async ValueTask<Result<T>> SendRequestAsync<T>(
         NetworkRequest request,
         CancellationToken cancellationToken)
@@ -32,6 +39,7 @@ internal sealed class NetworkClient : INetworkClient
         return await SendRequestAsync<T>(request, null, cancellationToken);
     }
 
+    /// <inheritdoc/>
     public async ValueTask<Result<T>> SendRequestAsync<T>(
         NetworkRequest request,
         System.Text.Json.Serialization.Metadata.JsonTypeInfo? jsonTypeInfo = default,

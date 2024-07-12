@@ -1,5 +1,3 @@
-using Microsoft.Extensions.DependencyInjection;
-
 namespace KlinUtils.Networking;
 
 internal static class NetworkClientExtensions

@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Formats.Asn1;
+using System.Net;
 
 using FluentAssertions;
 
@@ -31,6 +32,7 @@ public class NetworkClientTests
         // when
         Result<object> actualResult = await _networkClient.SendRequestAsync<object>(networkRequest, _cancellationToken);
 
+        // then
         actualResult.HasError.Should().BeTrue();
         actualResult.Errors.Count.Should().Be(expectedErrorCount);
         actualResult.Errors.First().Should().BeEquivalentTo(expectedError);
@@ -47,6 +49,7 @@ public class NetworkClientTests
         // when
         Result<object> actualResult = await _networkClient.SendRequestAsync<object>(networkRequest, _cancellationToken);
 
+        // then
         actualResult.HasError.Should().BeTrue();
         actualResult.Errors.Count.Should().Be(expectedErrorCount);
         actualResult.Errors.First().Should().BeEquivalentTo(expectedError);
@@ -66,6 +69,7 @@ public class NetworkClientTests
         // when
         Result<object> actualResult = await _networkClient.SendRequestAsync<object>(networkRequest, _cancellationToken);
 
+        // then
         actualResult.HasError.Should().BeTrue();
         actualResult.Errors.Count.Should().Be(expectedErrorCount);
         actualResult.Errors.First().Should().BeEquivalentTo(expectedError);
@@ -93,9 +97,38 @@ public class NetworkClientTests
         // when
         Result<object> actualResult = await networkClient.SendRequestAsync<object>(networkRequest, _cancellationToken);
 
+        // then
         actualResult.HasError.Should().BeTrue();
         actualResult.Errors.Count.Should().Be(expectedErrorCount);
         actualResult.Errors.First().Should().BeEquivalentTo(expectedError);
+        networkClient.StatusCode.Should().Be(expectedStatusCode);
+    }
+
+    [Fact]
+    public async Task SendRequestAsync_ShouldReturnOk_WhenUrlProvidedIsValid()
+    {
+        // given
+        NetworkRequest networkRequest = NetworkRequestBuilder.Create()
+            .For(RequestType.Get)
+            .WithUrl("https://google.com")
+            .WithHeaders([])
+            .TimesOutAfter(default!)
+            .Uses(string.Empty)
+            .Build();
+        ValueTask<Result<object>> expectedResult = GetFailureResultFrom<object>(Error.None);
+        HttpStatusCode expectedStatusCode = HttpStatusCode.OK;
+
+        INetworkClient networkClient = Substitute.For<INetworkClient>();
+        networkClient
+            .SendRequestAsync<object>(networkRequest, _cancellationToken)
+            .Returns(expectedResult);
+        networkClient.StatusCode.Returns(expectedStatusCode);
+
+        // when
+        Result<object> actualResult = await networkClient.SendRequestAsync<object>(networkRequest, _cancellationToken);
+
+        // then
+        actualResult.IsSuccess.Should().BeTrue();
         networkClient.StatusCode.Should().Be(expectedStatusCode);
     }
 
