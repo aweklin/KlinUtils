@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>KlinUtils</PackageId>
-    <Version>0.0.4-preview</Version>
+    <Version>0.0.6-preview</Version>
     <Authors>Aweklin</Authors>
     <Product>KlinUtils</Product>
     <Description>Contains set of utilities to perform common tasks in various project, such as Networking, Result pattern, Exception, etc...</Description>
