@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4926C21A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlinUtils.Blazor.Tests.Unit", "tests\KlinUtils.Blazor.Tests.Unit\KlinUtils.Blazor.Tests.Unit.csproj", "{6304AFD0-6723-4E13-8AEC-E0A7C7EA93AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlinUtils.Common", "src\KlinUtils.Common\KlinUtils.Common.csproj", "{3092C4B8-7501-4B7D-949C-70C45F8FA503}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +30,14 @@ Global
 		{6304AFD0-6723-4E13-8AEC-E0A7C7EA93AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6304AFD0-6723-4E13-8AEC-E0A7C7EA93AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6304AFD0-6723-4E13-8AEC-E0A7C7EA93AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3092C4B8-7501-4B7D-949C-70C45F8FA503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3092C4B8-7501-4B7D-949C-70C45F8FA503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3092C4B8-7501-4B7D-949C-70C45F8FA503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3092C4B8-7501-4B7D-949C-70C45F8FA503}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7A171C85-D06A-477E-B280-B8220F1AD3D9} = {C361D3D1-00D8-4FC6-95AF-B9B44F69512A}
 		{6304AFD0-6723-4E13-8AEC-E0A7C7EA93AD} = {4926C21A-C419-4DD6-9949-5C2C6D40D68F}
+		{3092C4B8-7501-4B7D-949C-70C45F8FA503} = {C361D3D1-00D8-4FC6-95AF-B9B44F69512A}
 	EndGlobalSection
 EndGlobal

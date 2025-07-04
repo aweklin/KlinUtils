@@ -2,8 +2,8 @@ using System.Reflection;
 
 using Bunit;
 
-using KlinUtils.Blazor.Components.Models;
 using KlinUtils.Blazor.Components.Views;
+using KlinUtils.Common.Enums;
 
 namespace KlinUtils.Blazor.Tests.Unit.Components.Views;
 

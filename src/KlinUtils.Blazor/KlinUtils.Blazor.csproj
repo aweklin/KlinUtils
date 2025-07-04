@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <PackageId>KlinUtils.Blazor</PackageId>
     <Authors>Aweklin</Authors>
     <Product>KlinUtils.Blazor</Product>
@@ -21,6 +21,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../KlinUtils.Common/KlinUtils.Common.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.1</Version>
+    <PackageId>KlinUtils.Common</PackageId>
+    <Authors>Aweklin</Authors>
+    <Product>KlinUtils.Common</Product>
+    <Description>Reusable utilities, such as enum</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>utils;</PackageTags>
+    <RepositoryUrl>https://github.com/aweklin/KlinUtils.Common</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

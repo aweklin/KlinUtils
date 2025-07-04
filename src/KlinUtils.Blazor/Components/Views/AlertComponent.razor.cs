@@ -1,4 +1,4 @@
-using KlinUtils.Blazor.Components.Models;
+using KlinUtils.Common.Enums;
 
 using Microsoft.AspNetCore.Components;
 

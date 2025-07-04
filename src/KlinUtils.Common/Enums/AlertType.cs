@@ -1,4 +1,4 @@
-namespace KlinUtils.Blazor.Components.Models;
+namespace KlinUtils.Common.Enums;
 
 public enum AlertType
 {
