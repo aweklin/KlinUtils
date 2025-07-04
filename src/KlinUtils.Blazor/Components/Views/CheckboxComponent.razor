@@ -1,0 +1,17 @@
+﻿<div class="inline-flex items-center cursor-pointer" @onclick="ToggleCheckChanged">
+    <input type="checkbox" class="hidden" @bind="IsChecked" disabled="@IsDisabled"/>
+    <div class="w-5 h-5 rounded border border-gray-400 flex items-center justify-center
+       transition-colors duration-150 ease-in-out
+       @(IsChecked ? "bg-green-600 border-green-600" : "bg-white")">
+       @if (IsChecked)
+       {
+              <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 111.414-1.414L8.414 12.172l7.879-7.879a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+       }
+    </div>
+    @if (!string.IsNullOrWhiteSpace(Label))
+    {
+       <span class="ml-2 text-gray-800">@Label</span>
+    }
+</div>

@@ -1,0 +1,12 @@
+﻿<div class="p-4 flex flex-col rounded-md my-4 @GetStyles()">
+    <h4 class="font-medium">@Message</h4>
+    @if (Data.Any())
+    {
+        <ul>
+            @foreach (string item in Data)
+            {
+                <li>@item</li>
+            }
+        </ul>
+    }
+</div>

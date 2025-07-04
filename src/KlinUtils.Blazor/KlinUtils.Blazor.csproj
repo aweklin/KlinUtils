@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.1</Version>
+    <PackageId>KlinUtils.Blazor</PackageId>
+    <Authors>Aweklin</Authors>
+    <Product>KlinUtils.Blazor</Product>
+    <Description>Reusable Blazor UI components for clean, modern, state-driven apps</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>blazor;component;ui;textfield;select;file;modal;alert;checkbox</PackageTags>
+    <RepositoryUrl>https://github.com/aweklin/KlinUtils.Blazor</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" />
+  </ItemGroup>
+
+</Project>

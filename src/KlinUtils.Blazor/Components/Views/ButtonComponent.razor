@@ -1,0 +1,14 @@
+﻿<button type="button" @onclick="OnClick" class="@CssClass" disabled="@IsDisabled">
+    @if(Content is not null)
+    {
+        <div>@Content</div>
+    }
+    else
+    {
+        @if (UseImage && ImageUrl is not null)
+        {
+            <img src="@ImageUrl" alt="@ImageAlt" class="@ImageCssClass" />
+        }
+        <div>@Label</div>
+    }
+</button>

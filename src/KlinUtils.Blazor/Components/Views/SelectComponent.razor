@@ -1,0 +1,17 @@
+@typeparam T
+
+<select
+    @bind="Value"
+    @bind:event="onchange"
+    class="@CssClass"
+    required="@IsRequired"
+    disabled="@IsDisabled">
+    @if(!string.IsNullOrWhiteSpace(Placeholder))
+    {
+        <option value="@DefaultValue">@Placeholder</option>
+    }
+    @foreach(SelectItem item in Items)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+</select>
