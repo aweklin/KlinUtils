@@ -2,4 +2,4 @@
 
 Contains set of utilities to perform common tasks in various project
 
-### KlinBlazor documentation can be found [here](https://github.com/aweklin/KlinUtils/KlinUtils.Blazor/README.md)
+### KlinBlazor documentation can be found [here](https://github.com/aweklin/KlinUtils/blob/main/src/KlinUtils.Blazor/README.md)
