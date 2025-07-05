@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
     <PackageId>KlinUtils.Blazor</PackageId>
     <Authors>Aweklin</Authors>
     <Product>KlinUtils.Blazor</Product>
@@ -25,6 +25,12 @@
 
   <ItemGroup>
     <ProjectReference Include="../KlinUtils.Common/KlinUtils.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>KlinUtils.Blazor.Tests.Unit</_Parameter1>
+    </AssemblyAttribute>
   </ItemGroup>
 
 </Project>

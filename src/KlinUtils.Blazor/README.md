@@ -117,6 +117,13 @@ dotnet add package KlinUtils.Blazor
 </ContainerComponent>
 ```
 
+### 🧭 Navigation Provider
+
+```
+_navigationProvider.NavigateTo("/dashboard", forceLoad: true);
+string absolute = _navigationProvider.ToAbsoluteUrl("api/user");
+```
+
 # 🧪 Testing Philosophy
 
 All components are validated using bUnit. Examples include:

@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <PackageId>KlinUtils.Common</PackageId>
     <Authors>Aweklin</Authors>
     <Product>KlinUtils.Common</Product>
@@ -14,5 +14,11 @@
     <PackageTags>utils;</PackageTags>
     <RepositoryUrl>https://github.com/aweklin/KlinUtils.Common</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>KlinUtils.Common.Tests.Unit</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
 
 </Project>
