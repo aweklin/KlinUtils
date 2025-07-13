@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <PackageId>KlinUtils.Common</PackageId>
     <Authors>Aweklin</Authors>
     <Product>KlinUtils.Common</Product>
