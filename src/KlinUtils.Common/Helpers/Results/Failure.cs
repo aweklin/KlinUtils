@@ -6,7 +6,7 @@ public record Failure(IEnumerable<ErrorInfo> Errors)
 {
     public ErrorInfo? FirstError => Errors.FirstOrDefault();
 
-    public string? FirstErrorAsString => FirstError?.Message;
+    public string FirstErrorAsString => FirstError?.Message ?? string.Empty;
 
     public string AllErrorsAsString
     {
