@@ -209,4 +209,36 @@ public class ResultTests
         // Then
         Assert.Equal(hashA, hashB);
     }
+
+    [Fact]
+    public void Failure_ShouldReturnFirstError()
+    {
+        // Given
+        ErrorInfo inputErrorInfo = ErrorInfo.BadRequest();
+        Failure failure = new([inputErrorInfo]);
+        ErrorInfo expectedErrorInfo = inputErrorInfo;
+
+        // When
+        Result<string, Failure> result = Result<string, Failure>.Failure(failure);
+
+        // Then
+        Assert.True(result.HasError);
+        Assert.Equivalent(expectedErrorInfo, result.FailureValue.FirstError);
+    }
+
+    [Fact]
+    public void Failure_ShouldReturnFirstErrorAsString()
+    {
+        // Given
+        ErrorInfo inputErrorInfo = ErrorInfo.BadRequest();
+        Failure failure = new([inputErrorInfo]);
+        string expectedErrorMessage = inputErrorInfo.Message;
+
+        // When
+        Result<string, Failure> result = Result<string, Failure>.Failure(failure);
+
+        // Then
+        Assert.True(result.HasError);
+        Assert.Equal(expectedErrorMessage, result.FailureValue.FirstErrorAsString);
+    }
 }
