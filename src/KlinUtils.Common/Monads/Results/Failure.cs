@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace KlinUtils.Common.Helpers.Results;
+namespace KlinUtils.Common.Monads.Results;
 
 public record Failure(IEnumerable<ErrorInfo> Errors)
 {

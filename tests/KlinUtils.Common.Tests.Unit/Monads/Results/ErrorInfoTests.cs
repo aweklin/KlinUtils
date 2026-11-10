@@ -1,6 +1,6 @@
-using KlinUtils.Common.Helpers.Results;
+using KlinUtils.Common.Monads.Results;
 
-namespace KlinUtils.Common.Tests.Unit.Helpers.Results;
+namespace KlinUtils.Common.Tests.Unit.Monads.Results;
 
 public class ErrorInfoTests
 {

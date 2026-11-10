@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace KlinUtils.Common.Helpers.Results;
+namespace KlinUtils.Common.Monads.Results;
 
 public sealed record UnexpectedError(
     IEnumerable<ErrorInfo> Errors)

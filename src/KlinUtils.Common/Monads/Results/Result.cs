@@ -1,4 +1,4 @@
-namespace KlinUtils.Common.Helpers.Results;
+namespace KlinUtils.Common.Monads.Results;
 
 public readonly struct Result<TSuccess, TError> : IEquatable<Result<TSuccess, TError>>
     where TError : Failure

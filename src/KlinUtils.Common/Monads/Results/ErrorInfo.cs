@@ -1,4 +1,4 @@
-namespace KlinUtils.Common.Helpers.Results;
+namespace KlinUtils.Common.Monads.Results;
 
 public record struct ErrorInfo(string Code, string Message)
 {

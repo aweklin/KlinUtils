@@ -1,4 +1,4 @@
-namespace KlinUtils.Common.Helpers.Results;
+namespace KlinUtils.Common.Monads.Results;
 
 public sealed record UnauthorizedError(
     string Message = "Access denied")
