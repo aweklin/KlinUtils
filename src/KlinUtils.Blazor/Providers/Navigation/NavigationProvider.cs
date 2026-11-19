@@ -1,11 +1,17 @@
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
 namespace KlinUtils.Blazor.Providers.Navigation;
 
-internal sealed class NavigationProvider(NavigationManager navigationManager) : INavigationProvider
+internal sealed class NavigationProvider(
+    NavigationManager navigationManager,
+    IJSRuntime jSRuntime) : INavigationProvider
 {
     private readonly NavigationManager _navigationManager =
-        navigationManager ?? throw new ArgumentNullException();
+        navigationManager ?? throw new ArgumentNullException(nameof(navigationManager));
+
+    private readonly IJSRuntime _jSRuntime =
+        jSRuntime ?? throw new ArgumentNullException(nameof(jSRuntime));
 
     public string BaseUrl => _navigationManager.BaseUri;
 
@@ -40,5 +46,20 @@ internal sealed class NavigationProvider(NavigationManager navigationManager) : 
         {
             _navigationManager.NavigateTo(route, forceLoad, replace);
         }
+    }
+
+    public ValueTask BackAsync(CancellationToken cancellationToken = default)
+    {
+        return _jSRuntime.InvokeVoidAsync("history.back", cancellationToken);
+    }
+
+    public ValueTask ForwardAsync(CancellationToken cancellationToken = default)
+    {
+        return _jSRuntime.InvokeVoidAsync("history.forward", cancellationToken);
+    }
+
+    public ValueTask GotoAsync(int delta, CancellationToken cancellationToken = default)
+    {
+        return _jSRuntime.InvokeVoidAsync("history.go", cancellationToken, delta);
     }
 }

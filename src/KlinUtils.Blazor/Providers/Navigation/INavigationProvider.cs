@@ -38,4 +38,29 @@ public interface INavigationProvider
     /// <param name="forceLoad">If true, bypasses client-side routing and forces the browser to load the new page from the server, whether or not the URI would normally be handled by the client-side router.</param>
     /// <param name="replace">If true, replaces the current entry in the history stack. If false, appends the new entry to the history stack.</param>
     void NavigateTo(string route, bool isInternalUrl = true, bool forceLoad = false, bool replace = false);
+
+    /// <summary>
+    /// Navigates backward, using the browser history.
+    /// </summary>
+    /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+    /// <returns>ValueTask.</returns>
+    ValueTask BackAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Navigates forward, using the browser history.
+    /// </summary>
+    /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+    /// <returns>ValueTask.</returns>
+    ValueTask ForwardAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Navigates backward, using the browser history.
+    /// </summary>
+    /// <example>await navigationProvider.GoAsync(-1); // Back.</example>
+    /// <example>await navigationProvider.GoAsync(1); // Forward.</example>
+    /// <example>await navigationProvider.GoAsync(-2); // Two pages back.</example>
+    /// <param name="delta">Specifies the history you want to navigate to.</param>
+    /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+    /// <returns>ValueTask.</returns>
+    ValueTask GotoAsync(int delta, CancellationToken cancellationToken = default);
 }

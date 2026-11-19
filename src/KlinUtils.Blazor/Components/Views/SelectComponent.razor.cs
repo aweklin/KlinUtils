@@ -30,6 +30,9 @@ public sealed partial class SelectComponent<T> : ComponentBase
     public string Placeholder { get; set; } = string.Empty;
 
     [Parameter]
+    public string InitialValue { get; set; } = string.Empty;
+
+    [Parameter]
     public IEnumerable<SelectItem> Items { get; set; } = [];
 
     [Parameter]

@@ -31,6 +31,20 @@ public class SelectComponentTests : TestContext
     }
 
     [Fact]
+    public void ShouldRenderPlaceholderOption_WhenPlaceholderAndInitialValueIsSet()
+    {
+        IRenderedComponent<SelectComponent<int>> cut = RenderComponent<SelectComponent<int>>(p =>
+        {
+            p.Add(c => c.Placeholder, "Select a number");
+            p.Add(c => c.InitialValue, "-1");
+        });
+
+        AngleSharp.Dom.IElement option = cut.Find("select").Children[0];
+        option.TextContent.Should().Be("Select a number");
+        option.GetAttribute("value").Should().Be("-1");
+    }
+
+    [Fact]
     public void ShouldRenderItems_AsOptions()
     {
         SelectItem[] items =
@@ -120,7 +134,6 @@ public class SelectComponentTests : TestContext
 }
 
 #pragma warning disable SA1201 // Elements should appear in the correct order
-
 public enum TestColor
 #pragma warning restore SA1201 // Elements should appear in the correct order
 {
