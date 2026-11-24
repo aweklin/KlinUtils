@@ -10,6 +10,16 @@ public interface INavigationProvider
     string BaseUrl { get; }
 
     /// <summary>
+    /// Gets the current URI. The Microsoft.AspNetCore.Components.NavigationManager.Uri
+    /// is always represented as an absolute URI in string form.
+    ///
+    /// Remarks:
+    ///     Setting Microsoft.AspNetCore.Components.NavigationManager.Uri will not trigger
+    ///     the Microsoft.AspNetCore.Components.NavigationManager.LocationChanged event.
+    /// </summary>
+    string Uri { get; }
+
+    /// <summary>
     /// Returns the base url with the provided relative path.
     /// </summary>
     /// <param name="relativeUrl">Specifies the relative path to be added to the base url.</param>

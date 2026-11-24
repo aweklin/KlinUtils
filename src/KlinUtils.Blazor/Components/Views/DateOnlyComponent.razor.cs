@@ -1,10 +1,12 @@
+using System.Globalization;
+
 using Microsoft.AspNetCore.Components;
 
 namespace KlinUtils.Blazor.Components.Views;
 
 public sealed partial class DateOnlyComponent : ComponentBase
 {
-  public string Type { get; set; } = "date";
+  public string Type { get; } = "date";
 
   [Parameter]
   public DateOnly Value { get; set; }
@@ -25,6 +27,14 @@ public sealed partial class DateOnlyComponent : ComponentBase
   public bool IsRequired { get; set; }
 
   public bool IsEnabled => !IsDisabled;
+
+  public string ValueToDisplay
+  {
+    get
+    {
+      return Value == default ? string.Empty : Value.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+    }
+  }
 
   public async Task SetValue(DateOnly value)
   {

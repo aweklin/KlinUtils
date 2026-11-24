@@ -12,7 +12,7 @@ public static class ExceptionExtensions
         ArgumentNullException.ThrowIfNull(exception);
 
         while (exception.Message.Contains(
-            "see inner exception",
+            "inner exception",
             StringComparison.CurrentCultureIgnoreCase)
             && exception.InnerException is not null)
         {

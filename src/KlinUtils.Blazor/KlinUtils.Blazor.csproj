@@ -5,14 +5,14 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.11</Version>
+    <Version>0.0.14</Version>
     <PackageId>KlinUtils.Blazor</PackageId>
     <Authors>Aweklin</Authors>
     <Product>KlinUtils.Blazor</Product>
     <Description>Reusable Blazor UI components for clean, modern, state-driven apps</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>blazor;component;ui;textfield;select;file;modal;alert;checkbox</PackageTags>
-    <RepositoryUrl>https://github.com/aweklin/KlinUtils.Blazor</RepositoryUrl>
+    <RepositoryUrl>https://github.com/aweklin/KlinUtils/tree/main/src/KlinUtils.Blazor</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

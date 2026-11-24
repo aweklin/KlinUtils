@@ -5,14 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.5</Version>
+    <Version>0.0.7</Version>
     <PackageId>KlinUtils.Common</PackageId>
     <Authors>Aweklin</Authors>
     <Product>KlinUtils.Common</Product>
     <Description>Reusable utilities, such as enum</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>utils;</PackageTags>
-    <RepositoryUrl>https://github.com/aweklin/KlinUtils.Common</RepositoryUrl>
+    <RepositoryUrl>https://github.com/aweklin/KlinUtils/tree/main/src/KlinUtils.Common</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
