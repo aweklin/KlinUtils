@@ -20,6 +20,12 @@ public interface INavigationProvider
     string Uri { get; }
 
     /// <summary>
+    /// Gets a relative URI path.
+    /// Given a base URI (e.g., one previously returned by NavigationManager.BaseUri), converts an absolute URI into one relative to the base URI prefix.
+    /// </summary>
+    ReadOnlySpan<char> RelativePath { get; }
+
+    /// <summary>
     /// Returns the base url with the provided relative path.
     /// </summary>
     /// <param name="relativeUrl">Specifies the relative path to be added to the base url.</param>

@@ -17,6 +17,8 @@ internal sealed class NavigationProvider(
 
     public string Uri => _navigationManager.Uri;
 
+    public ReadOnlySpan<char> RelativePath => _navigationManager.ToBaseRelativePath(_navigationManager.Uri);
+
     public string ToAbsoluteUrl(string relativeUrl)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(relativeUrl);
